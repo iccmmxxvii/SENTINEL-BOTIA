@@ -1,0 +1,28 @@
+mode:
+  default: paper
+  live_enabled: false
+  live_confirmation: ""
+
+runtime:
+  loop_seconds: 5
+  heartbeat_seconds: 30
+  max_backoff_seconds: 60
+
+risk:
+  max_trades_per_round: 1
+  max_size: 50
+  cooldown_seconds: 10
+  min_edge_probability: 0.62
+  no_trade_window_seconds: 20
+
+data:
+  db_path: data/botia5m.sqlite
+  status_path: STATUS.md
+  log_path: logs/botia5m.log
+
+market:
+  discovery_urls:
+    - "https://gamma-api.polymarket.com/markets"
+  reference_urls:
+    - "https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT"
+    - "https://api.coinbase.com/v2/prices/BTC-USD/spot"
